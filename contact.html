@@ -21,8 +21,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link href="./styles.css" rel="stylesheet" />
-    <link href="contactpage.css" rel="stylesheet"/>
+    
   </head>
   <style>
     .content {
@@ -34,6 +33,63 @@
             align-items: center;
             flex-direction: row;
         }
+        /* Inside style._d.css */
+
+/* Back Now button styles */
+.back-now {
+  background-color: gold; /* Solid background color */
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: blink 1.5s infinite;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  background-image: none; /* Remove any inherited background images */
+  background-clip: border-box;
+  border: 2px solid gold; /* Adds a border to clearly define the button */
+  margin-left: 90px;
+}
+
+/* Blinking effect */
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+
+/* Magnifying effect on hover */
+.back-now:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Soft glow effect */
+}
+
+/* Media query adjustments for smaller screens */
+@media (max-width: 888px) {
+  nav .navbar .nav-links .menus {
+    display: block;
+    margin-top: 20px;
+  }
+
+  nav .navbar .nav-links .menus li {
+    display: block;
+    line-height: 40px;
+  }
+
+  .book-now,
+  .back-now {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
   </style>
   <body>
     
@@ -74,7 +130,7 @@
     <a target="_blank" href="https://www.facebook.com/profile.php?id=100076148143972">
         <img class="instagram-logo" src="icons8-facebook-48.png" alt="Instagram Logo">
     </a>
-    
+    <a class="back-now" href="index.html">Back Now</a>
 </div>
     
     <script

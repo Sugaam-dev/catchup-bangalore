@@ -9,6 +9,24 @@
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
                 />
+                <link rel="stylesheet" href="contactpage.css" />
+                <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+                />
+                <link
+                  href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+                  rel="stylesheet"
+                />
+                <link
+                  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+                  rel="stylesheet"
+                />
+                <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                />
+                
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
@@ -23,13 +41,14 @@
             flex-direction: column;
             font-family: Arial, sans-serif;
             background-color: black;
-            color: white;
+            
         }
 
         .content {
             text-align: center;
             width: 90%;
             max-width: 600px;
+            
         }
 
         h1 {
@@ -48,6 +67,7 @@
             width: 100%;
             margin-top: 20px;
             margin-bottom: 40px;
+            color: white;
         }
 
         .contact-info {
@@ -83,6 +103,9 @@
         to {
             box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
         }
+        }
+        .content a{
+            text-decoration: none;
         }
 
 
@@ -123,7 +146,7 @@
             }
         }
         /* book now button */
-.book-now {
+.book-now,.back-now {
   background-color: gold; /* Solid background color */
   color: white;
   padding: 10px 20px;
@@ -138,6 +161,7 @@
   background-image: none; /* Remove any inherited background images */
   background-clip: border-box; /* Ensures the background is not transparent */
   border: 2px solid gold; /* Adds a border to clearly define the button */
+  margin-top: 50px;
 }
 
 /* Blinking effect */
@@ -158,7 +182,7 @@
     </style>
 </head>
 <body>
-    <a class="book-now" href="contact.html">Book Now</a>
+    <a class="book-now" href="#contact">Book Now</a>
     <div class="content">
         
         <img src="logo.jpeg" alt="Coming Soon Image">
@@ -171,6 +195,9 @@
             <a target="_blank" href="https://www.instagram.com/catchupbangalore/">
                 <img class="instagram-logo" src="instagram.svg" alt="Instagram Logo">
             </a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100076148143972">
+                <img class="instagram-logo" src="icons8-facebook-48.png" alt="Instagram Logo">
+            </a>
         </div>
         <!-- whatsapp icon -->
         <div class="floating_btn">
@@ -181,6 +208,141 @@
             </a>
     
         </div>
+    
     </div>
+    <br><br><br><br><br><br>
+    <section id="contact">
+        <div class="container">
+            <h1>
+              "Your Next Great Night Starts with a Message!"
+            </h1>
+            <div class="contact-form">
+              <h2>Contact Us</h2>
+              <form id="contactForm" data-web3forms="true">
+                  <input type="hidden" name="access_key" value="54c18d7b-81a8-426a-af6d-03232092ae5c">
+                  <label for="firstName">First Name*</label>
+                  <input type="text" id="firstName" name="firstName" required>
+      
+                  <label for="lastName">Last Name*</label>
+                  <input type="text" id="lastName" name="lastName" required>
+      
+                  <label for="email">Email Address*</label>
+                  <input type="email" id="email" name="email" required>
+      
+                  <label for="phone">Phone Number*</label>
+                  <input type="tel" id="phone" name="phone" required>
+      
+                  <label for="howDidYouHear">How Did You Hear About Us?*</label>
+                  <input type="text" id="howDidYouHear" name="howDidYouHear" required>
+      
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message"></textarea>
+      
+                  <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div><br><br>
+          <div class="content">
+          <a target="_blank" href="https://www.instagram.com/catchupbangalore/">
+              <img class="instagram-logo" src="instagram.svg" alt="Instagram Logo">
+          </a>
+          <a target="_blank" href="https://www.facebook.com/profile.php?id=100076148143972">
+              <img class="instagram-logo" src="icons8-facebook-48.png" alt="Instagram Logo">
+          </a>
+          <a class="back-now" href="#">Back Now</a>
+      </div>
+          
+          <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+          ></script>
+          <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+          ></script>
+          <script src="script._d.js"></script>
+          <script type="text/javascript">
+            const toggleMenu = () => {
+              document.body.classList.toggle("open");
+            };
+          </script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const phoneInputField = document.querySelector("#phone");
+              const phoneInput = window.intlTelInput(phoneInputField, {
+                initialCountry: "in", // Set India as the default country
+                utilsScript:
+                  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                separateDialCode: true,
+              });
+      
+              const contactForm = document.getElementById("contactForm");
+      
+              contactForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+      
+                const firstName = document.getElementById("firstName").value.trim();
+                const lastName = document.getElementById("lastName").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const phone = phoneInput.getNumber();
+                const howDidYouHear = document
+                  .getElementById("howDidYouHear")
+                  .value.trim();
+                const message = document.getElementById("message").value.trim();
+      
+                if (!firstName || !lastName || !email || !phone || !howDidYouHear) {
+                  alert("Please fill out all required fields.");
+                  return;
+                }
+      
+                if (!validateEmail(email)) {
+                  alert("Please enter a valid email address.");
+                  return;
+                }
+      
+                if (!phoneInput.isValidNumber()) {
+                  alert("Please enter a valid phone number.");
+                  return;
+                }
+      
+                const formData = new FormData(contactForm);
+              formData.append('phone', phone);  // Adding the formatted phone number to the form data
+      
+              fetch('https://api.web3forms.com/submit', {
+                  method: 'POST',
+                  body: formData,
+              })
+              .then(response => response.json())
+              .then(data => {
+                  if (data.success) {
+                      alert("Form submitted successfully!");
+                  } else {
+                      alert("Failed to submit form. Please try again later.");
+                  }
+              })
+              .catch(error => {
+                  alert("An error occurred while submitting the form. Please try again later.");
+              });
+      
+                // Form submission logic here
+              });
+      
+              phoneInputField.addEventListener("countrychange", function () {
+                const selectedCountryData = phoneInput.getSelectedCountryData();
+                phoneInputField.value = `+${
+                  selectedCountryData.dialCode
+                } ${phoneInputField.value.replace(/^\+\d+\s*/, "")}`;
+              });
+      
+              function validateEmail(email) {
+                const re =
+                  /^(([^<>()\[\]\.,;:\s@"]+(.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+                return re.test(String(email).toLowerCase());
+              }
+            });
+          </script>
+    </section>
+    
 </body>
 </html>

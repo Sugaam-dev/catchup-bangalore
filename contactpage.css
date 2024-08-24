@@ -1,23 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", serif;
-  }
-  body {
-    background-image: url(pub1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-    
-    --clr-white: #fff;
-    --clr-black: #000;
-    --clr-gray: #37474f;
-    --clr-gray-light: #b0bec5;
-  }
+
 
 .container {
     text-align: center;
